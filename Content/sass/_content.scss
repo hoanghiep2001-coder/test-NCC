@@ -1,0 +1,46 @@
+.wrapper {
+  .wrapper-content {
+    margin: 20px auto 0;
+    .container {
+      width: $width-content-for-PC-low-solution;
+
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+        .logo-link {
+          .logo-img {
+          }
+        }
+      }
+      .hero {
+        background-color: $hero-background-color;
+        padding: $padding-hero-for-PC-low-solution;
+        text-align: center;
+        margin-bottom: 40px;
+        .hero-title {
+          margin-bottom: 18px;
+          line-height: 21px;
+        }
+        .hero-desc {
+          line-height: 19px;
+        }
+      }
+      .mainContent {
+        .mainContent__item {
+          .mainContent__item-title {
+            margin-bottom: 18px;
+          }
+          .mainContent__item-desc {
+            .mainContent__item-img {
+              margin-right: 16px;
+              width: 128px;
+              height: 128px;
+            }
+            .mainContent__item-paragraph {
+            }
+          }
+        }
+      }
+    }
+  }
+}

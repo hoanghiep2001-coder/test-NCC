@@ -1,0 +1,27 @@
+.wrapper {
+  .wrapper-sideBar {
+    background-color: $sideBar-color;
+    color: $grey-color;
+    min-width: $sideBar-width-default;
+    .sideBar__list {
+      .sideBar__list-item {
+        padding-top: 14px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        transition: 0.2s all ease-in-out;
+        font-size: 16px;
+        color: $grey-color;
+        border-bottom: 1px solid $border-color;
+        cursor: pointer;
+        line-height: 19px;
+        &.active {
+          color: $white-color;
+        }
+        &:hover {
+          background-color: $hover-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
