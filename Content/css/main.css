@@ -70,10 +70,11 @@
 }
 
 .wrapper .wrapper-content {
-  margin: 20px auto 0;
+  width: 100%;
 }
 .wrapper .wrapper-content .container {
   width: 1000px;
+  margin: 20px auto 0;
 }
 .wrapper .wrapper-content .container .logo {
   text-align: center;
@@ -100,9 +101,15 @@
   width: 128px;
   height: 128px;
 }
-.wrapper .wrapper-content .wrapper-footer .footer__desc {
-  padding: 30px 0;
+.wrapper .wrapper-content .wrapper-footer {
+  margin-top: 182px;
   border-top: 1px solid #dedede;
+}
+.wrapper .wrapper-content .wrapper-footer .container.footer-container {
+  margin-top: 0;
+}
+.wrapper .wrapper-content .wrapper-footer .container .footer__desc {
+  padding: 30px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

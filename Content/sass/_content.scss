@@ -1,9 +1,9 @@
 .wrapper {
   .wrapper-content {
-    margin: 20px auto 0;
+    width: 100%;
     .container {
       width: $width-content-for-PC-low-solution;
-
+      margin: 20px auto 0;
       .logo {
         text-align: center;
         margin-bottom: 30px;
