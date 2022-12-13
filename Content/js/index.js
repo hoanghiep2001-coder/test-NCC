@@ -1,3 +1,4 @@
+let sideBar = document.querySelector(".wrapper-sideBar");
 let logo = document.querySelector(".logo");
 let hero = document.querySelector(".hero");
 let mainContent = document.querySelector(".mainContent");
@@ -9,12 +10,28 @@ let app = {
     this.renderHTML();
     this.handleEvent();
   },
-  handleEvent: function () {},
+  handleEvent: function () {
+    document.querySelector(".sideBar__list-item").classList.add("active");
+  },
   renderHTML: function () {
+    this.renderSidebar();
     this.renderLogo();
     this.renderHero();
     this.renderProduct();
     this.renderFooter();
+  },
+  renderSidebar: function () {
+    let htlms = `
+    <ul class="sideBar__list">
+      ${APIs.sideBar.Menu.map((item) => {
+        return `
+        <li key=${item.id} class="sideBar__list-item text-title">${item.title}</li>
+        `;
+      }).join("")}
+    </ul>
+    `;
+
+    sideBar.innerHTML = htlms;
   },
   renderLogo: function () {
     let htmls = `

@@ -1,3 +1,36 @@
+@keyframes showUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes toRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes toLeft {
+  from {
+    transform: translateX(30px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -101,7 +134,21 @@
   color: #aaaaaa;
   border-bottom: 1px solid #5c5c5c;
   cursor: pointer;
+  visibility: hidden;
+  animation: showUp 1s forwards;
   line-height: 19px;
+}
+.wrapper .wrapper-sideBar .sideBar__list .sideBar__list-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.wrapper .wrapper-sideBar .sideBar__list .sideBar__list-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.wrapper .wrapper-sideBar .sideBar__list .sideBar__list-item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.wrapper .wrapper-sideBar .sideBar__list .sideBar__list-item:nth-child(5) {
+  animation-delay: 1.6s;
 }
 .wrapper .wrapper-sideBar .sideBar__list .sideBar__list-item.active {
   color: #ffffff;
@@ -139,12 +186,18 @@
 .wrapper .wrapper-content .container .logo {
   text-align: center;
   margin-bottom: 30px;
+  animation: toRight 1s forwards;
+  animation-delay: 1.6s;
+  visibility: hidden;
 }
 .wrapper .wrapper-content .container .hero {
   background-color: #efefef;
   padding: 38px 100px;
   text-align: center;
   margin-bottom: 40px;
+  animation: toLeft 1s forwards;
+  animation-delay: 2s;
+  visibility: hidden;
 }
 .wrapper .wrapper-content .container .hero .hero-title {
   margin-bottom: 18px;
@@ -152,6 +205,21 @@
 }
 .wrapper .wrapper-content .container .hero .hero-desc {
   line-height: 19px;
+}
+.wrapper .wrapper-content .container .mainContent .col:nth-child(1) {
+  animation: toRight 1s forwards;
+  animation-delay: 2.4s;
+  visibility: hidden;
+}
+.wrapper .wrapper-content .container .mainContent .col:nth-child(2) {
+  animation: showUp 1s forwards;
+  animation-delay: 2.8s;
+  visibility: hidden;
+}
+.wrapper .wrapper-content .container .mainContent .col:nth-child(3) {
+  animation: toLeft 1s forwards;
+  animation-delay: 3.2s;
+  visibility: hidden;
 }
 .wrapper .wrapper-content .container .mainContent .mainContent__item .mainContent__item-title {
   margin-bottom: 18px;
