@@ -195,7 +195,7 @@
     text-align: start;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1023px) {
   .wrapper .wrapper-content .container {
     width: 550px;
   }
