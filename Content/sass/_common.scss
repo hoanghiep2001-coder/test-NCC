@@ -35,3 +35,53 @@
 .d-flex {
   display: flex;
 }
+
+@media (max-width: 414px) {
+  .text-title {
+    font-weight: 700;
+    color: $title-color;
+    font-size: 14px;
+  }
+
+  .text-paragraph {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .row {
+    margin-left: -9px;
+    margin-right: -9px;
+  }
+
+  .col {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-title {
+    font-weight: 700;
+    color: $title-color;
+    font-size: 16px;
+  }
+
+  .text-paragraph {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .row {
+    margin-left: -9px;
+    margin-right: -9px;
+  }
+
+  .col {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}

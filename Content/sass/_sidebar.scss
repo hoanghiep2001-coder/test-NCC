@@ -25,3 +25,26 @@
     }
   }
 }
+
+// Mobile
+@media (max-width: 414px) {
+  .wrapper {
+    .wrapper-sideBar {
+      position: fixed;
+      width: 100%;
+      top: 0%;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      .sideBar__list {
+        display: flex;
+        justify-content: space-between;
+        .sideBar__list-item {
+          // display: inline-block;
+          border-bottom: none;
+          padding: 14px 16px;
+        }
+      }
+    }
+  }
+}

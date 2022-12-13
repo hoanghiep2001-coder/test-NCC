@@ -44,3 +44,102 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+  .wrapper {
+    .wrapper-content {
+      margin-top: 50px;
+      .container {
+        width: $width-content-for-Mobile;
+        .logo {
+          .logo-link {
+            .logo-img {
+              width: 288px;
+              height: 100px;
+            }
+          }
+        }
+        .hero {
+          padding: 38px 50px;
+          .hero-title {
+          }
+          .hero-desc {
+            text-align: justify;
+          }
+        }
+        .mainContent {
+          .mainContent__item {
+            .mainContent__item-title {
+              font-size: 14px;
+            }
+            .mainContent__item-paragraph {
+              font-size: 12px;
+
+              text-align: start;
+            }
+            .mainContent__item-desc {
+              .mainContent__item-img {
+                width: 50px;
+                height: 50px;
+                margin-right: 2px;
+              }
+              .mainContent__item-paragraph {
+                font-size: 12px;
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    .wrapper-content {
+      .container {
+        width: $width-content-for-tablet;
+        .hero {
+          padding: 38px 50px;
+          .hero-title {
+          }
+          .hero-desc {
+            text-align: justify;
+          }
+        }
+        .mainContent {
+          .mainContent__item {
+            .mainContent__item-title {
+              font-size: 14px;
+            }
+            .mainContent__item-paragraph {
+              text-align: start;
+            }
+            .mainContent__item-desc {
+              .mainContent__item-img {
+                width: 50px;
+                height: 50px;
+                margin-right: 12px;
+              }
+              .mainContent__item-paragraph {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .wrapper {
+    .wrapper-content {
+      margin-top: 50px;
+      .container {
+        width: $width-content-for-PC-high-solution;
+      }
+    }
+  }
+}

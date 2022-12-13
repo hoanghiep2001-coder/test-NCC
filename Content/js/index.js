@@ -47,8 +47,8 @@ let app = {
             ${item.desc}
           </p>
         </div>
-        <p class="text-paragraph mainContent__item-paragraph">
-          ${item.moreDesc}
+         <p class="text-paragraph mainContent__item-paragraph">
+           ${item.moreDesc}
         </p>
       </div>
     </div>
