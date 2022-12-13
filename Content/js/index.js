@@ -1,28 +1,9 @@
+let logo = document.querySelector(".logo");
+let hero = document.querySelector(".hero");
 let mainContent = document.querySelector(".mainContent");
-let contentItems = [
-  {
-    title: "Lorem ipsum dolor sit amet",
-    image: "../Content/image/css-icon%201.svg",
-    desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit",
-    moreDesc:
-      "accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    image: "../Content/image/html-icon%201.svg",
-    desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit",
-    moreDesc:
-      "accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    image: "../Content/image/url-icon%201.svg",
-    desc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit",
-    moreDesc:
-      "accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.",
-  },
-];
-
+let footer = document.querySelector(".wrapper-footer");
+let getAPIs = localStorage.getItem("api");
+let APIs = JSON.parse(getAPIs);
 let app = {
   init: function () {
     this.renderHTML();
@@ -30,7 +11,36 @@ let app = {
   },
   handleEvent: function () {},
   renderHTML: function () {
-    let htmls = contentItems.map((item) => {
+    this.renderLogo();
+    this.renderHero();
+    this.renderProduct();
+    this.renderFooter();
+  },
+  renderLogo: function () {
+    let htmls = `
+    <a href="${APIs.mainContent.logo.path}" class="logo-link">
+    <img
+      class="logo-img"
+      src="${APIs.mainContent.logo.image}"
+      alt=""
+    />
+  </a>
+    `;
+
+    logo.innerHTML = htmls;
+  },
+  renderHero: function () {
+    let htmls = `
+    <h3 class="text-title hero-title">${APIs.mainContent.hero.title}</h3>
+    <p class="text-paragraph hero-desc">
+    ${APIs.mainContent.hero.content}
+    </p>
+    `;
+
+    hero.innerHTML = htmls;
+  },
+  renderProduct: function () {
+    let htmls = APIs.mainContent.product.map((item) => {
       return `
       <div class="col col-4">
       <div class="mainContent__item">
@@ -54,8 +64,16 @@ let app = {
     </div>
       `;
     });
-
     mainContent.innerHTML = htmls.join("");
+  },
+  renderFooter: function () {
+    let htmls = `
+    <div class="container footer-container">
+    <p class="footer__desc text-paragraph">${APIs.footer.content}</p>
+  </div>
+    `;
+
+    footer.innerHTML = htmls;
   },
 };
 
